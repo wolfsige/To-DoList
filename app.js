@@ -41,4 +41,5 @@ showTask()
 
 clearBtn.addEventListener("click", function(event){
   localStorage.clear("data") 
+  location.reload()
 })

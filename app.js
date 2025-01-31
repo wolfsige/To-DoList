@@ -6,7 +6,7 @@ function addTask(){
     alert("You must write something before adding it to the list!")
   }
   else{
-    let li = document.createElement('li');
+    let li = document.createElement("li");
     li.innerHTML = inputBox.value;
     listContainer.appendChild(li)
     let span = document.createElement("span");
@@ -15,3 +15,12 @@ function addTask(){
   }
   inputBox.value = ""
 }
+
+listContainer.addEventListener("click", function(e){
+  if(e.target.tagName === "LI"){
+    e.target.classList.toggle("checked");
+  }
+  else if(e.target.tagName === "SPAN"){
+    e.target.parentElement.remove();
+  }
+}, false);

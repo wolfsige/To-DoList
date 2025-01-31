@@ -1,5 +1,6 @@
 const inputBox = document.getElementById("input-box")
 const listContainer = document.getElementById("list-container")
+const clearBtn = document.getElementById("clear-button")
 
 function addTask(){
   if(inputBox.value === ""){
@@ -17,13 +18,13 @@ function addTask(){
   saveData();
 }
 
-listContainer.addEventListener("click", function(e){
-  if(e.target.tagName === "LI"){
-    e.target.classList.toggle("checked");
+listContainer.addEventListener("click", function(event){
+  if(event.target.tagName === "LI"){
+    event.target.classList.toggle("checked");
     saveData();
   }
-  else if(e.target.tagName === "SPAN"){
-    e.target.parentElement.remove();
+  else if(event.target.tagName === "SPAN"){
+    event.target.parentElement.remove();
     saveData();
   }
 }, false);
@@ -37,3 +38,7 @@ function showTask(){
 }
 
 showTask()
+
+clearBtn.addEventListener("click", function(event){
+  localStorage.clear("data") 
+})

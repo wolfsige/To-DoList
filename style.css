@@ -94,7 +94,21 @@ ul li.checked{
 }
 
 .clear:hover{
-  transition: 1s ease-in;
-  background: linear-gradient(180deg,rgb(238, 88, 88), white);
+  transition: .2s ease-in;
   color: black;
+}
+
+.clear:active{
+  transform: scale(.9);
+  transition: .2s;
+}
+
+button:hover{
+  transition: .2s ease-in;
+  color: black;
+}
+
+button:active{
+  transform: scale(.9);
+  transition: .2s;
 }

@@ -88,3 +88,13 @@ ul li.checked{
   color: #555;
   text-decoration: line-through;
 }
+
+.clear{
+  background: rgb(238, 88, 88);
+}
+
+.clear:hover{
+  transition: 1s ease-in;
+  background: linear-gradient(180deg,rgb(238, 88, 88), white);
+  color: black;
+}
